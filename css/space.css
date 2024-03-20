@@ -1,0 +1,62 @@
+/* .space {
+  padding: 100px 0;
+} */
+/* .space .inner {
+  position: relative;
+} */
+/* ↑ 위의 두 설정은 common.css에 설정해뒀음 */
+.space img {
+  width: 40%;
+  position: absolute;
+  right: 0;
+  top: 150px;
+  opacity: 0;
+  transition: 0.3s;
+}
+.space li:first-of-type img {
+  opacity: 1;
+}
+.spaceList {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10%;
+}
+
+.spaceList li:nth-of-type(2) {
+  width: 70%;
+}
+.spaceList li span {
+  display: inline-block;
+  background-color: var(--color-wh);
+  border: 1px solid var(--color-mb);
+  padding: 1rem 2rem;
+  font-size: 20px;
+  color: var(--color-mb);
+  border-radius: 50px;
+  /* ↑ 매끄러운 둥근라인을 만들고 싶다면? 글자크기의 절반 이상 되겠다 싶은 px단위로 큰 사이즈 아무거나 넣기 */
+  /* 상대단위만 아니면 됨 */
+  margin: 0 5px 16px 0;
+  transition: 0.3s;
+}
+.spaceList li span:hover {
+  background-color: var(--color-mb);
+  color: var(--color-wh);
+}
+.spaceList li span:hover + img {
+  opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .space img {
+    width: 100%;
+  }
+  .spaceList {
+    padding-top: 70%;
+    width: 100%;
+  }
+  .spaceList li {
+    width: auto !important;
+    /* !important 또는 .space 넣기 */
+  }
+}

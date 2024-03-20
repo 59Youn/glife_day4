@@ -1,0 +1,90 @@
+.news {
+  background-color: var(--color-sb);
+}
+.news .swiper {
+  padding: 50px 16px;
+  left: -16px;
+  /* overflow: visible; */
+}
+.newsItem {
+  padding: 2rem;
+  background-color: var(--color-wh);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+  transition: 0.3s;
+}
+.newsItem > * {
+  display: block;
+}
+.newsItem .more {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.newsItem span {
+  margin-bottom: 20px;
+}
+/* .newsItem .fa-plus {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  font-size: 2rem;
+  transition: 0.3s;
+} */
+/* ↑ font-awesome으로 하는 방법 */
+.newsItem .more span {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  font-size: 2rem;
+  transition: 0.3s;
+  width: 30px;
+  height: 30px;
+}
+.newsItem .more span::before,
+.newsItem .more span::after {
+  content: "";
+  position: absolute;
+  background-color: #999;
+}
+.newsItem .more span::before {
+  width: 100%;
+  height: 1px;
+  top: 50%;
+}
+.newsItem .more span::after {
+  height: 100%;
+  width: 1px;
+  left: 50%;
+}
+.newsItem h3 {
+  font-size: 28px;
+  height: 95px;
+}
+.newsItem p {
+  margin: 30px 0 50px 0;
+}
+.newsItem h3,
+.newsItem p {
+  overflow: hidden;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.newsItem time {
+  margin-bottom: 16px;
+}
+.newsSlide li:hover .newsItem {
+  transform: translateY(-30px);
+}
+/* .newsSlide li:hover .fa-plus {
+  transform: rotate(135deg);
+} */
+/* ↑ font-awesome으로 하는 방법 */
+.newsSlide li:hover .more span {
+  transform: rotate(135deg);
+}
